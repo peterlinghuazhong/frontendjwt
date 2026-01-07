@@ -30,7 +30,7 @@ const Products = () => {
     if (!jwtToken) return;
 
     axios
-      .get("http://localhost:3000/products", {
+      .get(`${import.meta.env.VITE_API_URL}/products`, {
         headers: {
           Authorization: "Bearer " + jwtToken,
         },
